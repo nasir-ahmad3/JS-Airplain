@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body div.screen{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://opengameart.org/sites/default/files/bg_02_h.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    font-family: sans-serif;
+}
+div.screen > .my-plane{
+    position: fixed;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    /* transition: all 0.001s; */
+}
+div.screen > .my-plane > svg{
+    width: 100px;
+    height: 100px;
+}
+div.screen > div.rocket{
+    position: fixed;
+    top: -50%;
+    left: 20%;
+    transform: translateX(-50%);
+    /* transition: all 0.1s linear; */
+}
+div.screen > div.rocket > svg{
+    width: 70px;
+    height: 70px;
+    transform: rotate(135deg);  
+}
+div.screen .bestScore{
+    display: inline-block;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+}
+div.screen > div.score{
+    display: inline-block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.startGame{
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #ffffff1f;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-start{
+    background-color: #251a59;;
+    backdrop-filter: blur(5px);
+    padding: 7px 25px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.startGame.deactive{
+    display: none;
+}
+.gameOver{
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #ffffff1f;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+.gameOver.active{
+    display: flex;
+}
+.gameOver > div{
+    margin: 5px;
+    color: #fff;
+}
+.gameOver > div.text{
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.alert{
+    position: fixed;
+    color: red;
+    top:50%;
+    left: 50%;
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+}
+.sound-control{
+    padding: 30px;
+    position: fixed;
+    top: 0px;
+    right: 0;
+}
+.volume{
+    width: 40px;
+    fill: #fff;
+    cursor: pointer;
+    display: none;
+}
+.volume-high.active{  
+    display: block;
+}
+.volume-xmark.active{  
+    display: block;
+}
